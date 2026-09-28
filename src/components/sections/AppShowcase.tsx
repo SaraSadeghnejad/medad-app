@@ -13,18 +13,19 @@ export function AppShowcase() {
     <section className="bg-[var(--bg-soft)] py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-center gap-4 overflow-x-auto pb-4">
-          {SHOTS.map((src, i) => (
-            <div
-              key={src}
-              className={`relative shrink-0 overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm ${
-                i === 2 ? "h-64 w-32 sm:h-80 sm:w-40" : "h-56 w-28 sm:h-72 sm:w-36"
-              }`}
-            >
-              {/* Replace with your real screenshots */}
-              <div className="h-full w-full bg-gradient-to-br from-gray-100 to-gray-200" />
+       
+             
+                <Image
+  src="/showcase.png"
+  alt="teaser"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: "100%", height: "auto" }}
+/>
             </div>
-          ))}
-        </div>
+         
+        
       </div>
     </section>
   );

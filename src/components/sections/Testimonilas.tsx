@@ -156,7 +156,7 @@ function QuoteCardView({ card }: { card: QuoteCard }) {
 
       {/* Header: name + subtitle + avatar */}
       <div className="relative flex items-start justify-between gap-3 pt-6 pl-6">
-        <div className="flex-1" />
+        <div className="flex-row-reverse" />
         <div className="text-right">
           <h3 className="text-sm font-extrabold text-gray-900">{card.name}</h3>
           <p className="mt-0.5 text-[10px] font-medium text-gray-400">

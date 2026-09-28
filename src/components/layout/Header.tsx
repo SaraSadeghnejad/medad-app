@@ -1,4 +1,5 @@
 import { BookOpen } from "lucide-react";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -6,10 +7,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--brand-light)] text-[var(--brand)]">
-            <BookOpen size={20} />
-          </span>
-          <span className="text-lg font-black text-gray-900">م دادپ</span>
+           <Image src="/logo.png" alt="teaser" width={30} height={30} />
         </a>
 
         {/* CTA */}

@@ -1,4 +1,5 @@
 import { X, Check } from "lucide-react";
+import Image from 'next/image';
 
 export function Comparison() {
   return (
@@ -17,6 +18,14 @@ export function Comparison() {
             <li>• تردید در مفاهیم و عدم تمرکز</li>
             <li>• ناامیدی در یادگیری</li>
           </ul>
+          <Image
+            src="/sec4.png"
+            alt="teaser"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
 
         {/* Right way */}
@@ -32,6 +41,14 @@ export function Comparison() {
             <li>• پرسش و پاسخ و رفع اشکال</li>
             <li>• رشد مستمر و بازدهی بالا</li>
           </ul>
+           <Image
+            src="/sec5.png"
+            alt="teaser"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
       </div>
     </section>

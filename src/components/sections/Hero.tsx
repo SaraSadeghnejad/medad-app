@@ -1,4 +1,5 @@
 import { ArrowLeft, Presentation } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -18,25 +19,29 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <a href="#pricing" className="btn-primary">
-              شروع کنید
-              <ArrowLeft size={16} />
+              شروع رایگان     
             </a>
             <a href="#curriculum" className="btn-outline">
-              <Presentation size={16} />
-              مشاهده دوره
+                  مشاهده دمو
+                      <ArrowLeft size={16} />
+        
             </a>
           </div>
-
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-xs text-gray-500 lg:justify-start">
-            <span className="font-bold">websummit</span>
-            <span className="font-bold">mentoracademy</span>
+   
+</div>
+        {/* Illustration */}
+        <div className="flex flex-col justify-center">
+          {/* Replace with real illustration */}
+             <Image src="/pic1.png" alt="teaser" width={500} height={250} />
+              <div className="mt-10 flex   items-center justify-center gap-6 text-xs text-gray-500 lg:justify-end">
+          <div className=" flex flex-col flex-wrap items-start justify-center gap-4 text-xs text-gray-500 lg:justify-start">
+            <Image src="/camp2-logo.png" alt="teaser" width={150} height={50} />
+          <span className="font-bold">دارای اعتبارنامه رشد وزارت آموزش و پرورش</span></div>
+          <div className=" flex flex-col flex-wrap items-start justify-center gap-6 text-xs text-gray-500 lg:justify-start">
+          <Image src="/camp-logo.png" alt="teaser" width={150} height={50} />
+            <span className="font-bold">پذیرفته شده در WebSummit Qatar 2026</span>
           </div>
         </div>
-
-        {/* Illustration */}
-        <div className="flex justify-center">
-          {/* Replace with real illustration */}
-          <div className="aspect-square w-full max-w-md rounded-3xl bg-gradient-to-br from-[#ede7fd] via-white to-[#fce7c9] p-8 shadow-sm" />
         </div>
       </div>
     </section>
