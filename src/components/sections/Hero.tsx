@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--bg-soft)]">
+    <section className="relative overflow-hidden">
       <div className="section relative z-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
         {/* Copy */}
         <div className="text-center lg:text-right">
-          <h1 className="text-3xl font-black leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <p className="text-3xl font-black font-medium leading-20 text-gray-900 sm:text-4xl lg:text-5xl">
             یادگیری، فقط ویدیو دیدن
             <br />
             نیست!
-          </h1>
+          </p>
 
           <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
             مسیر سخت یادگیری رو به قدم های خیلی کوچیک تبدیل کن.

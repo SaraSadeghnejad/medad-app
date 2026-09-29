@@ -3,37 +3,37 @@ import Image from "next/image";
 
 const FEATURES = [
   {
-    icon: Boxes,
-    title: "تمرین",
-    description: "در ارائه مطالب و انجام‌دادن کار، مهارت لازم رو کسب می‌کنی.",
+    icon: '/ico1.png',
+    title: "کلاس",
+    description: "آموزش، جزوه، تمرین و خودآزمایی در کنار هم تا هر مبحث را بهتر و کامل‌تر یاد بگیری.",
     span: "lg:col-span-5",
     image: "/sec1.png",
   },
   {
-    icon: Users,
-    title: "کلاس",
-    description: "در جلسات مشترک و کار تیمی، روی سرعت خودت کار می‌کنی.",
+    icon:  '/ico2.png',
+    title: "آزمون",
+    description: "با آزمون‌های منظم، فقط درس نمی‌خوانی؛می‌فهمی چقدر یاد گرفته‌ای، کجا ضعف داری و باید روی چه چیزی بیشتر کار کنی.",
     span: "lg:col-span-7",
     image: "/sec2.png",
   },
   {
-    icon: BookOpen,
-    title: "مشاوره",
-    description: "مشاوره اختصاصی برای انتخاب مسیر و رفع مشکلات می‌گیری.",
+    icon:  '/ico3.png',
+    title: "برنامه‌ریزی",
+    description: "داشتن برنامه، شروعِ پیشرفته؛با یک مسیر روشن و برنامه مشخص، قدم‌به‌قدم جلو برو.",
     span: "lg:col-span-7",
     image: "/sec6.png",
   },
   {
-    icon: Compass,
-    title: "راهنمایی",
-    description: "مسیر آموزش هدفمند و برنامه‌ریزی شده برای رسیدن به هدف.",
+    icon:  '/ico4.png',
+     title: "مشاوره",
+    description: "اینجا تو مسیر تنها نیستی؛با مشاوره باانگیزه‌تر می‌مونی و هدفمندتر جلو می‌ری.",
     span: "lg:col-span-5",
     image: "/sec3.png",
   },
   {
-    icon: Award,
-    title: "مدارک",
-    description: "در پایان هر مسیر، مدرک معتبر و پشتیبانی برای استخدام می‌گیری.",
+    icon:  '/ico5.png',
+    title: "ویچارو",
+    description: "دیگه برای رفع اشکال منتظر کلاس بعدی نمون... سؤال‌هات رو بپرس، مفاهیم رو بهتر یاد بگیر و اشکالاتت رو در کمترین زمان برطرف کن. دستیار هوشمند مداداپ همیشه آماده راهنمایی توئه؛ چه تو درس، چه تو مشاوره.",
     span: "lg:col-span-12",
     image: "/sec4.png",
   },
@@ -41,7 +41,7 @@ const FEATURES = [
 
 export function Curriculum() {
   return (
-    <section id="curriculum" className="section">
+    <section id="curriculum" className="section  bg-[var(--bg-soft)]">
       <h2 className="section-title text-center">
         مدادپ فقط محتوا نیست، یک چرخه کامل آموزشی
       </h2>
@@ -61,7 +61,12 @@ export function Curriculum() {
                 {/* Text block */}
                 <div className="flex-1">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-light)] text-[var(--brand)]">
-                    <Icon size={22} />
+                    <Image
+                    src={item.icon}
+                    alt={item.title}
+                    width={22}
+                    height={22}
+                  />
                   </div>
                   <h3 className="mb-2 text-base font-bold text-gray-900">
                     {item.title}

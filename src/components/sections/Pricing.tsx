@@ -176,7 +176,7 @@ export function Pricing() {
     <section
       id="pricing"
       dir="rtl"
-      className="relative overflow-hidden bg-[var(--bg-soft)] py-16"
+      className="relative overflow-hidden py-16"
     >
       <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-purple-300/30 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-emerald-300/30 blur-3xl" />

@@ -30,7 +30,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="section">
+    <section className="section  bg-[var(--bg-soft)]">
       <h2 className="section-title text-center">سوالات پرتکرار</h2>
       <p className="mt-3 text-center text-sm text-gray-500">
         هر سوالی که نیاز به پاسخ داشت، در اینجا آورده شده.

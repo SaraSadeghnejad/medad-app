@@ -1,14 +1,14 @@
-import { X, Check } from "lucide-react";
+import { X, Check, CircleX, CircleCheck, CircleCheckBig } from "lucide-react";
 import Image from 'next/image';
 
 export function Comparison() {
   return (
-    <section className="section">
+    <section className="section  bg-[var(--bg-soft)]">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Wrong way */}
         <div className="rounded-2xl border border-red-100 bg-red-50/50 p-6">
           <h3 className="mb-6 flex items-center gap-2 text-base font-bold text-red-600">
-            <X size={18} />
+            <CircleX size={18} />
             بدون مدادپ
           </h3>
           <ul className="space-y-3 text-sm text-gray-700">
@@ -31,7 +31,7 @@ export function Comparison() {
         {/* Right way */}
         <div className="rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <h3 className="mb-6 flex items-center gap-2 text-base font-bold text-emerald-600">
-            <Check size={18} />
+            <CircleCheckBig size={18} />
             همراه با مدادپ
           </h3>
           <ul className="space-y-3 text-sm text-gray-700">

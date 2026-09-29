@@ -10,7 +10,7 @@ const SHOTS = [
 
 export function AppShowcase() {
   return (
-    <section className="bg-[var(--bg-soft)] py-16">
+    <section className=" py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-center gap-4 overflow-x-auto pb-4">
        

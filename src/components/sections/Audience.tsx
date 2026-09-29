@@ -1,19 +1,19 @@
-import { Sparkles, FileQuestion, Hourglass } from "lucide-react";
+import { Sparkles, FileQuestion, Hourglass, Book, BookOpen, PanelsTopLeft, ChartArea, ChartLine } from "lucide-react";
 import Image from "next/image";
 
 const ITEMS = [
   {
-    icon: Hourglass,
+    icon: BookOpen,
     title: "کمک درست حسابی زیاد و گرون",
     description: "میلیون‌ها تومان خرج کلاس‌های آموزشی کردی ولی به نتیجه نرسیدی.",
   },
   {
-    icon: FileQuestion,
+    icon: PanelsTopLeft,
     title: "برنامه مطالعه نداری",
     description: "نمی‌دونی از کجا شروع کنی، چطور یاد بگیری، چه منابعی بهتره.",
   },
     {
-    icon: Sparkles,
+    icon: ChartLine,
     title:  "آزمون فقط برات استرسه",
     description: "اگر دنبال یه تغییر مسیر حرفه‌ای یا حتی زندگی هستی، مسیر امن و تست‌شده‌ای می‌خوای.",
   },
@@ -21,7 +21,7 @@ const ITEMS = [
 
 export function Audience() {
   return (
-    <section className="section">
+    <section className="section bg-[var(--bg-soft)] ">
       <h2 className="section-title text-center flex justify-center">
         درس خوندن <span className="text-[var(--brand)]">           
          <Image
