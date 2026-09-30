@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 export function Comparison() {
   return (
-    <section className="section  bg-[var(--bg-soft)]">
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+    <section className="section ">
+      <div className="grid grid-cols-1 gap-0 lg:grid-cols-2">
         {/* Wrong way */}
-        <div className="rounded-2xl border border-red-100 bg-red-50/50 p-6">
+        <div className="rounded-2xl border border-red-100 border-l-0 rounded-bl-none rounded-tl-none bg-red-50/50 p-6">
           <h3 className="mb-6 flex items-center gap-2 text-base font-bold text-red-600">
             <CircleX size={18} />
            بدون مداداپ  
@@ -29,7 +29,7 @@ export function Comparison() {
         </div>
 
         {/* Right way */}
-        <div className="rounded-2xl border border-emerald-100  p-6">
+        <div className="rounded-2xl border border-[#DEE1E6] border-r-0 rounded-br-none rounded-tr-none  p-6">
           <h3 className="mb-6 flex items-center gap-2 text-base font-bold text-[#172B3D]">
             <CircleCheckBig size={18} className="text-[#27C840]" />
          همراه با مداداپ  
