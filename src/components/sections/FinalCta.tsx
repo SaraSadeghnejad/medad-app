@@ -5,10 +5,10 @@ export function FinalCta() {
     <section className='bg-white py-16'>
       <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8'>
         <div className='rounded-3xl bg-[#4A0D7E] px-8 py-12 text-center text-white'>
-          <h2 className='text-2xl font-black font-medium leading-20 sm:text-3xl lg:text-4xl'>
-            با مدادپ یادگیری رو به
-            <br />
-            <span className='text-[#FF8820] px-1'>عادت روزانه </span>یک تبدیل کن
+          <h2 className='text-2xl  font-normal leading-20 sm:text-3xl lg:text-4xl'>
+            با مدادپ یادگیری رو به 
+                <br/>
+            یک <span className='text-[#FF8820] px-1'> عادت روزانه </span>    تبدیل کن
           </h2>
 
           <p className='mt-4 text-sm text-white/80'>
@@ -18,12 +18,12 @@ export function FinalCta() {
           <div className='mt-8 flex flex-wrap items-center justify-center gap-3'>
             <a
               href='#pricing'
-              className='inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-[var(--brand)] transition hover:bg-gray-100'>
+              className='inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-bold text-[var(--brand)] transition hover:bg-gray-100'>
               رایگان ثبت‌نام کن
             </a>
             <a
               href='#pricing'
-              className='inline-flex items-center gap-2 rounded-xl border border-white/40 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10'>
+              className='inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10'>
               اشتراک ها <ArrowLeft size={16} />
             </a>
           </div>
