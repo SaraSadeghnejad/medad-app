@@ -17,11 +17,11 @@ export function Hero() {
             مسیر سخت یادگیری رو به قدم های خیلی کوچیک تبدیل کن.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+          <div className="mt-8 flex flex-wrap items-cente space-x-10 justify-center gap-3 lg:justify-start">
             <a href="#pricing" className="btn-primary">
               شروع رایگان     
             </a>
-            <a href="#curriculum" className="btn-outline">
+            <a href="#curriculum" className="text-[var(--brand)] flex justify-between gap-2 items-center">
                   مشاهده دمو
                       <ArrowLeft size={16} />
         

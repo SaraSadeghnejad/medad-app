@@ -7,35 +7,35 @@ const FEATURES = [
     title: "کلاس",
     description: "آموزش، جزوه، تمرین و خودآزمایی در کنار هم تا هر مبحث را بهتر و کامل‌تر یاد بگیری.",
     span: "lg:col-span-5",
-    image: "/sec1.png",
+    image: "/sec1.svg",
   },
   {
     icon:  '/ico2.png',
     title: "آزمون",
     description: "با آزمون‌های منظم، فقط درس نمی‌خوانی؛می‌فهمی چقدر یاد گرفته‌ای، کجا ضعف داری و باید روی چه چیزی بیشتر کار کنی.",
     span: "lg:col-span-7",
-    image: "/sec2.png",
+    image: "/sec2.svg",
   },
   {
     icon:  '/ico3.png',
     title: "برنامه‌ریزی",
     description: "داشتن برنامه، شروعِ پیشرفته؛با یک مسیر روشن و برنامه مشخص، قدم‌به‌قدم جلو برو.",
     span: "lg:col-span-7",
-    image: "/sec6.png",
+    image: "/sec6.svg",
   },
   {
     icon:  '/ico4.png',
      title: "مشاوره",
     description: "اینجا تو مسیر تنها نیستی؛با مشاوره باانگیزه‌تر می‌مونی و هدفمندتر جلو می‌ری.",
     span: "lg:col-span-5",
-    image: "/sec3.png",
+    image: "/sec7.svg",
   },
   {
     icon:  '/ico5.png',
     title: "ویچارو",
     description: "دیگه برای رفع اشکال منتظر کلاس بعدی نمون... سؤال‌هات رو بپرس، مفاهیم رو بهتر یاد بگیر و اشکالاتت رو در کمترین زمان برطرف کن. دستیار هوشمند مداداپ همیشه آماده راهنمایی توئه؛ چه تو درس، چه تو مشاوره.",
     span: "lg:col-span-12",
-    image: "/sec4.png",
+    image: "/sec3.svg",
   },
 ];
 
@@ -71,7 +71,7 @@ export function Curriculum() {
                   <h3 className="mb-2 text-base font-bold text-gray-900">
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-6 text-gray-500">
+                  <p className="text-sm leading-6 text-[#757575]">
                     {item.description}
                   </p>
                 </div>

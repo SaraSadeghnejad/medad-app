@@ -48,13 +48,7 @@ const CARDS: Card[] = [
     title: "دانش‌آموزان",
     subtitle: "به تسلط اساتید امتیاز ۵ از ۵ دادند.",
   },
-  {
-    kind: "quote",
-    name: "علی رضایی",
-    subtitle: "یازدهم ریاضی",
-    quote: "مسیر یادگیری رو برام خیلی ساده کرد",
-    avatar: "/avatar.png",
-  },
+
 ];
 
 // ─── Section ──────────────────────────────────────────────────────────────
@@ -66,12 +60,12 @@ export function Testimonials() {
         <div className="mx-auto mb-8 h-[3px] w-full max-w-3xl rounded-full bg-purple-600" />
 
         {/* Title */}
-        <h2 className="text-center text-2xl font-black text-gray-900 sm:text-3xl lg:text-4xl">
+        <h2 className="text-center text-2xl mb-12 font-black text-gray-900 sm:text-3xl lg:text-4xl">
           دیگران درباره‌ی مدادپ چه می‌گویند
         </h2>
 
         {/* Bottom purple rule */}
-        <div className="mx-auto mt-8 mb-12 h-[3px] w-full max-w-3xl rounded-full bg-purple-600" />
+     
 
         {/* Carousel */}
         <Swiper
@@ -100,6 +94,7 @@ export function Testimonials() {
           ))}
         </Swiper>
       </div>
+         <div className="mx-auto mt-8 mb-12 h-[3px] w-full max-w-3xl rounded-full bg-purple-600" />
     </section>
   );
 }
@@ -107,9 +102,10 @@ export function Testimonials() {
 // ─── Stat card ────────────────────────────────────────────────────────────
 function StatCardView({ card }: { card: StatCard }) {
   return (
-    <div className="relative flex h-full flex-col justify-center rounded-3xl border-[3px] border-gray-200 bg-white p-6 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.15)]">
+    <div className="relative  flex h-full  flex-col shadow-[0px 4px 10px 0px #00000040]  justify-center rounded-3xl border-[3px] border-gray-200 bg-white p-6 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.15)]">
+      <div className="border-[3px] border-[#B2B2B2] m-2 p-4 rounded-3xl">
       {/* Top row: stars + percent + title */}
-      <div className="mb-4 flex items-center justify-between gap-4">
+      <div className="mb-4 flex items-center flex-row-reverse justify-between gap-4 ">
         {/* Stars (left) */}
         <div className="flex shrink-0 gap-0.5">
           {[...Array(5)].map((_, i) => (
@@ -133,6 +129,7 @@ function StatCardView({ card }: { card: StatCard }) {
       <p className="text-right text-xs leading-6 text-gray-500">
         {card.subtitle}
       </p>
+      </div>
     </div>
   );
 }
@@ -155,7 +152,7 @@ function QuoteCardView({ card }: { card: QuoteCard }) {
       <div className="pointer-events-none absolute inset-x-10 top-5 h-[3px] rounded-full bg-purple-500" />
 
       {/* Header: name + subtitle + avatar */}
-      <div className="relative flex items-start justify-between gap-3 pt-6 pl-6">
+      <div className="relative flex flex-row-reverse items-start justify-between gap-3 pt-6 pl-6">
         <div className="flex-1" />
         <div className="text-right">
           <h3 className="text-sm font-extrabold text-gray-900">{card.name}</h3>
