@@ -41,56 +41,58 @@ const FEATURES = [
 
 export function Curriculum() {
   return (
-    <section id="curriculum" className="section  bg-[var(--bg-soft)]">
-      <h2 className="section-title text-center">
-        مدادپ فقط محتوا نیست، یک چرخه کامل آموزشی
-      </h2>
-      <p className="mt-3 text-center text-sm text-gray-500">
-        مسیر سخت یادگیری رو به قدم های خیلی کوچیک تبدیل کن.
-      </p>
+    <div className="bg-[var(--bg-soft)]">
+      <section id="curriculum" className="section  ">
+        <h2 className="section-title text-center">
+          مدادپ فقط محتوا نیست، یک چرخه کامل آموزشی
+        </h2>
+        <p className="mt-3 text-center text-sm text-gray-500">
+          مسیر سخت یادگیری رو به قدم های خیلی کوچیک تبدیل کن.
+        </p>
 
-      <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-12">
-        {FEATURES.map((item) => {
-          const Icon = item.icon;
-          return (
-            <div
-              key={item.title}
-              className={`card-soft relative overflow-hidden ${item.span}`}
-            >
-              <div className="flex items-center justify-between gap-4">
-                {/* Text block */}
-                <div className="flex-1">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-light)] text-[var(--brand)]">
-                    <Image
-                    src={item.icon}
-                    alt={item.title}
-                    width={22}
-                    height={22}
-                  />
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-12">
+          {FEATURES.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.title}
+                className={`card-soft relative overflow-hidden ${item.span}`}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  {/* Text block */}
+                  <div className="flex-1">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-light)] text-[var(--brand)]">
+                      <Image
+                        src={item.icon}
+                        alt={item.title}
+                        width={22}
+                        height={22}
+                      />
+                    </div>
+                    <h3 className="mb-2 text-base font-bold text-gray-900">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-6 text-[#757575]">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="mb-2 text-base font-bold text-gray-900">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm leading-6 text-[#757575]">
-                    {item.description}
-                  </p>
-                </div>
 
-                {/* Image block */}
-                <div className="relative h-28 w-28 shrink-0 sm:h-32 sm:w-32">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="128px"
-                    className="object-contain"
-                  />
+                  {/* Image block */}
+                  <div className="relative h-28 w-28 shrink-0 sm:h-32 sm:w-32">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="128px"
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
+            );
+          })}
+        </div>
+      </section>
+    </div>
   );
 }

@@ -48,7 +48,7 @@ const PLANS: Record<TabKey, Plan[]> = {
       priceLabel: "رایگان",
       description:
         "مداد سیاه کمک می‌کند شروع کنی و در مسیر بمانی.",
-      image:'/freemium.png',
+      image:'/freemium.svg',
       variant: "free",
       features: [
         { label: "دسترسی محدود به محتوای پایه", available: true },
@@ -70,7 +70,7 @@ const PLANS: Record<TabKey, Plan[]> = {
       period: "اشتراک ۱۲ ماهه",
       description:
         "مداد رنگی کمک می‌کند کاملا بفهمی، دقیق تحلیل شوی و سریع‌تر پیشرفت کنی.",
-      image: "/premium.png",
+      image: "/premium.svg",
       variant: "paid",
       features: [
         { label: "دسترسی کامل به محتوای پایه", available: true },
@@ -89,7 +89,7 @@ const PLANS: Record<TabKey, Plan[]> = {
       title: "مداد سیاه",
       priceLabel: "رایگان",
       description: "مداد سیاه کمک می‌کند شروع کنی و در مسیر بمانی.",
-      image:'/freemium.png',
+      image:'/freemium.svg',
       variant: "free",
       features: [
         { label: "دسترسی محدود به محتوای پایه", available: true },
@@ -111,7 +111,7 @@ const PLANS: Record<TabKey, Plan[]> = {
       period: "اشتراک ۱۲ ماهه",
       description:
         "مداد رنگی کمک می‌کند کاملا بفهمی، دقیق تحلیل شوی و سریع‌تر پیشرفت کنی.",
-      image: '/premium.png',
+      image: '/premium.svg',
       variant: "paid",
       features: [
         { label: "دسترسی کامل به محتوای پایه", available: true },
@@ -130,7 +130,7 @@ const PLANS: Record<TabKey, Plan[]> = {
       title: "مداد سیاه",
       priceLabel: "رایگان",
       description: "مداد سیاه کمک می‌کند شروع کنی و در مسیر بمانی.",
-      image:'/freemium.png',
+      image:'/freemium.svg',
       variant: "free",
       features: [
         { label: "دسترسی محدود به محتوای پایه", available: true },
@@ -152,7 +152,7 @@ const PLANS: Record<TabKey, Plan[]> = {
       period: "اشتراک ۱۲ ماهه",
       description:
         "مداد رنگی کمک می‌کند کاملا بفهمی، دقیق تحلیل شوی و سریع‌تر پیشرفت کنی.",
-      image: "/graduation-cap.png",
+      image: "/premium.svg",
       variant: "paid",
       features: [
         { label: "دسترسی کامل به محتوای پایه", available: true },
