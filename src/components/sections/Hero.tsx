@@ -7,21 +7,21 @@ export function Hero() {
       <div className="section relative z-10  items-center gap-10 flex   flex-col-reverse sm:flex-row">
         {/* Copy */}
         <div className="text-center md:text-right">
-          <p className="text-3xl font-Iransans-bold font-bold leading-20 text-[var(--main-text-colort)] sm:text-4xl lg:text-6xl">
+          <p className="text-3xl font-Iransans-bold font-bold leading-20 text-[#172B3D] sm:text-4xl lg:text-6xl">
             یادگیری، فقط ویدیو دیدن نیست!
           </p>
 
-          <p className="mt-4 text-sm leading-7 text-[var(--sub-text-colort)] sm:text-base">
+          <p className="mt-4 text-xl leading-7 text-[#757575] sm:text-base">
             مسیر سخت یادگیری رو به قدم های خیلی کوچیک تبدیل کن.
           </p>
 
           <div className="mt-8 flex flex-wrap items-cente space-x-10 justify-center gap-3 lg:justify-start">
-            <a href="#pricing" className="btn-primary">
+            <a href="#pricing" className="btn-primary text-xl">
               شروع رایگان
             </a>
             <a
               href="#curriculum"
-              className="text-[var(--brand)] flex justify-between gap-2 items-center"
+              className="text-[var(--brand)] flex justify-between gap-2 items-center text-xl"
             >
               مشاهده دمو
               <ArrowLeft size={16} />

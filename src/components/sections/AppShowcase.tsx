@@ -22,16 +22,7 @@ export function AppShowcase() {
             style={{ width: "100%", height: "auto" }}
           />
         </div>
-        <div className="flex items-end justify-center gap-4 overflow-x-auto pb-4 sm:hidden">
-          <Image
-            src="/mobile-aud.svg"
-            alt="teaser"
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
-          />
-        </div>
+   
       </div>
     </section>
   );

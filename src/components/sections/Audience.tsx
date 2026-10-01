@@ -23,14 +23,27 @@ export function Audience() {
   return (
     <div className="bg-[var(--bg-soft)]">
       <section className="section  ">
-        <h2 className="section-title text-center flex justify-center">
+        <h2 className="hidden section-title text-center  md:flex justify-center">
           درس خوندن{" "}
           <span className="text-[var(--brand)]">
-            <Image src="/do_not.svg" alt="teaser" width={100} height={100} />
+            <Image src="/do_not.svg" alt="teaser" width={140} height={98} className="relative bottom-4 p-0" />
           </span>{" "}
           این‌قدر پیچیده باشه!
         </h2>
-
+        <h2 className="md:hidden font-bold text-2xl text-center leading-10 text-[#821ADC]">
+          <span className="text-[#172B3D]">مداداپ فقط محتوا نیست، </span>
+          <br /> یک چرخه کامل آموزشیه
+        </h2>
+        <div className="flex items-end justify-center gap-4 overflow-x-auto pb-4 sm:hidden">
+          <Image
+            src="/mobile-aud.svg"
+            alt="teaser"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
           {ITEMS.map((item) => {
             const Icon = item.icon;
@@ -39,10 +52,10 @@ export function Audience() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-light)] text-[var(--brand)]">
                   <Icon size={22} />
                 </div>
-                <h3 className="mb-2 text-base font-bold text-[var(--main-text-colort)]">
+                <h3 className="mb-2 text-xl  text-[var(--main-text-colort)]">
                   {item.title}
                 </h3>
-                <p className="text-sm leading-6 text-[var(--sub-text-colort)]">
+                <p className="text-sm leading-6 text-[#757575]">
                   {item.description}
                 </p>
               </div>

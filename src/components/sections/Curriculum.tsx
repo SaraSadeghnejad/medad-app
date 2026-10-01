@@ -69,10 +69,10 @@ export function Curriculum() {
                         height={22}
                       />
                     </div>
-                    <h3 className="mb-2 text-base font-bold text-[var(--main-text-colort)]">
+                    <h3 className="mb-2 text-xl font-bold text-[#172B3D]">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-6 text-[var(--sub-text-colort)]]">
+                    <p className="text-sm leading-6 text-[#757575]">
                       {item.description}
                     </p>
                   </div>

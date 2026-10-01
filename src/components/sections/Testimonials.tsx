@@ -42,13 +42,13 @@ const CARDS: Card[] = [
     title: "کاربران",
     subtitle: "به کیفیت مدادپ امتیاز ۵ از ۵ دادند.",
   },
+
   {
     kind: "stat",
     percent: "۸۸٪",
     title: "دانش‌آموزان",
     subtitle: "به تسلط اساتید امتیاز ۵ از ۵ دادند.",
   },
-
 ];
 
 // ─── Section ──────────────────────────────────────────────────────────────
@@ -60,7 +60,7 @@ export function Testimonials() {
         <div className="mx-auto mb-8 h-[3px] w-full max-w-3xl rounded-full bg-purple-600" />
 
         {/* Title */}
-        <h2 className="text-center text-2xl mb-12 font-black text-gray-900 sm:text-3xl lg:text-4xl">
+        <h2 className="relative z-0  text-center text-2xl mb-12 font-black text-gray-900 sm:text-3xl lg:text-4xl">
           دیگران درباره‌ی مدادپ چه می‌گویند
         </h2>
 
@@ -102,33 +102,33 @@ export function Testimonials() {
 // ─── Stat card ────────────────────────────────────────────────────────────
 function StatCardView({ card }: { card: StatCard }) {
   return (
-    <div className="relative  flex h-full  flex-col shadow-[0px 4px 10px 0px #00000040]  justify-center rounded-3xl border-[3px] border-gray-200 bg-white p-6 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.15)]">
-      <div className="border-[3px] border-[#B2B2B2] m-2 p-4 rounded-3xl">
-      {/* Top row: stars + percent + title */}
-      <div className="mb-4 flex items-center flex-row-reverse justify-between gap-4 ">
-        {/* Stars (left) */}
-        <div className="flex shrink-0 gap-0.5">
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              size={16}
-              className="fill-purple-600 text-purple-600"
-            />
-          ))}
-        </div>
+    <div className="relative  flex h-full  flex-col shadow-[0px_4px_10px_0px_#00000040] border border-[#DEE1E6] justify-center rounded-3xl  bg-white p-6 ">
+      <div className="border-[3px] border-[#B2B2B2] m-2 p-6 rounded-3xl">
+        {/* Top row: stars + percent + title */}
+        <div className="mb-4 flex items-center flex-row-reverse justify-between gap-4 ">
+          {/* Stars (left) */}
+          <div className="flex shrink-0 gap-0.5">
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                size={16}
+                className="fill-purple-600 text-purple-600"
+              />
+            ))}
+          </div>
 
-        {/* Percent + title (right) */}
-        <div className="text-right">
-          <div className="text-lg font-black text-gray-900">
-            {card.percent} {card.title}
+          {/* Percent + title (right) */}
+          <div className="text-right">
+            <div className="text-lg font-black text-gray-900">
+              {card.percent} {card.title}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Subtitle */}
-      <p className="text-right text-xs leading-6 text-gray-500">
-        {card.subtitle}
-      </p>
+        {/* Subtitle */}
+        <p className="text-right text-xs leading-6 text-gray-500">
+          {card.subtitle}
+        </p>
       </div>
     </div>
   );
@@ -137,57 +137,46 @@ function StatCardView({ card }: { card: StatCard }) {
 // ─── Quote card ───────────────────────────────────────────────────────────
 function QuoteCardView({ card }: { card: QuoteCard }) {
   return (
-    <div className="relative flex h-full flex-col rounded-3xl border-[3px] border-purple-500 bg-white p-5 shadow-[0_10px_30px_-12px_rgba(124,58,237,0.35)]">
-      {/* Top opening quotes */}
-      <svg
-        className="absolute right-3 top-3 h-9 w-9 text-purple-600"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        aria-hidden
-      >
-        <path d="M7.5 6C5 6 3 8 3 10.5S5 15 7.5 15c.3 0 .5 0 .8-.1-.5 1.6-1.9 2.9-3.6 3.3-.3.1-.5.4-.4.7.1.3.4.5.7.4C7.6 18.7 10 15.9 10 12.4V10.5C10 8 8 6 7.5 6zm9 0C14 6 12 8 12 10.5S14 15 16.5 15c.3 0 .5 0 .8-.1-.5 1.6-1.9 2.9-3.6 3.3-.3.1-.5.4-.4.7.1.3.4.5.7.4C16.6 18.7 19 15.9 19 12.4V10.5C19 8 17 6 16.5 6z" />
-      </svg>
-
+    <div className=" flex h-full flex-col shadow-[0px_4px_10px_0px_#00000040] border border-[#DEE1E6] rounded-xl p-3">
       {/* Inner top line */}
-      <div className="pointer-events-none absolute inset-x-10 top-5 h-[3px] rounded-full bg-purple-500" />
+      <div className="rounded-xl relative border-3 border-purple-500 z-0 p-2">
+        {/* Top opening quotes */}
+        <div className="flex justify-center items-center absolute -top-6 z-50 -left-4 bg-white w-16 h-16 ">
+          <Image src={"/img3.svg"} alt={"quote"} width={50} height={50} />
+        </div>
+        {/* Header: name + subtitle + avatar */}
+        <div className=" flex flex-row-reverse items-start justify-between gap-3 pt-6 pl-6">
+          <div className="flex-1" />
+          <div className="text-right">
+            <h3 className="text-sm font-extrabold text-gray-900">
+              {card.name}
+            </h3>
+            <p className="mt-0.5 text-[10px] font-medium text-gray-400">
+              {card.subtitle}
+            </p>
+          </div>
+          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-purple-100 ring-2 ring-white">
+            <Image
+              src={card.avatar}
+              alt={card.name}
+              fill
+              sizes="48px"
+              className="object-cover"
+            />
+          </div>
+        </div>
 
-      {/* Header: name + subtitle + avatar */}
-      <div className="relative flex flex-row-reverse items-start justify-between gap-3 pt-6 pl-6">
-        <div className="flex-1" />
-        <div className="text-right">
-          <h3 className="text-sm font-extrabold text-gray-900">{card.name}</h3>
-          <p className="mt-0.5 text-[10px] font-medium text-gray-400">
-            {card.subtitle}
-          </p>
+        {/* Quote text */}
+        <p className="mt-6 mb-4 flex-1 text-center text-xs leading-6 text-gray-700">
+          {card.quote}
+        </p>
+        <div className="flex justify-center items-center absolute z-50 -right-4 -bottom-6 bg-white w-16 h-16 p-2">
+          <Image src={"/img2.svg"} alt={"quote"} width={50} height={50} />
         </div>
-        <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-purple-100 ring-2 ring-white">
-          <Image
-            src={card.avatar}
-            alt={card.name}
-            fill
-            sizes="48px"
-            className="object-cover"
-          />
-        </div>
+        {/* Bottom closing quotes */}
+
+        {/* Inner bottom line */}
       </div>
-
-      {/* Quote text */}
-      <p className="mt-6 mb-4 flex-1 text-center text-xs leading-6 text-gray-700">
-        {card.quote}
-      </p>
-
-      {/* Bottom closing quotes */}
-      <svg
-        className="absolute bottom-3 left-3 h-9 w-9 rotate-180 text-purple-600"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        aria-hidden
-      >
-        <path d="M7.5 6C5 6 3 8 3 10.5S5 15 7.5 15c.3 0 .5 0 .8-.1-.5 1.6-1.9 2.9-3.6 3.3-.3.1-.5.4-.4.7.1.3.4.5.7.4C7.6 18.7 10 15.9 10 12.4V10.5C10 8 8 6 7.5 6zm9 0C14 6 12 8 12 10.5S14 15 16.5 15c.3 0 .5 0 .8-.1-.5 1.6-1.9 2.9-3.6 3.3-.3.1-.5.4-.4.7.1.3.4.5.7.4C16.6 18.7 19 15.9 19 12.4V10.5C19 8 17 6 16.5 6z" />
-      </svg>
-
-      {/* Inner bottom line */}
-      <div className="pointer-events-none absolute inset-x-10 bottom-5 h-[3px] rounded-full bg-purple-500" />
     </div>
   );
 }

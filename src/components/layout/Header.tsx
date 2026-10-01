@@ -8,7 +8,7 @@ export function Header() {
         {/* CTA */}
         <a
           href="#pricing"
-          className="inline-flex items-center gap-2 text-[#821ADC] rounded-lg border border-[#821ADC] px-4 py-2 text-xs font-bold  transition"
+          className="inline-flex items-center gap-2 text-[#821ADC] rounded-lg border border-[#821ADC] px-4 py-2 text-[16px] font-bold  transition"
         >
           <span>ورود / ثبت نام</span>
         </a>

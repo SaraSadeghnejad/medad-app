@@ -14,21 +14,25 @@ import Image from "next/image";
 type Feature = {
   label: string;
   available: boolean;
+}
+type Subscription = {
+  period: string;
+  priceLabel: string;
+  oldPrice?: string;
+  badge?: string;
 };
 
 type Plan = {
   id: string;
-  title: string;            // e.g. "مداد سیاه"
-  priceLabel: string;         // e.g. "رایگان" or "۳,۲۰۸,۰۰۰"
-  badge?: string;             // e.g. "۳۳٪ تخفیف"
-  oldPrice?: string;          // e.g. "۱۵,۶۵۰,۰۰۰"
-  priceSuffix?: string;       // e.g. "تومان"
-  period?: string;            // e.g. "اشتراک ۱۲ ماهه"
+  title: string;
   description: string;
-  image: string;              // e.g. "/gift-box.png"
+  image: string;
   features: Feature[];
   cta: string;
   variant: "free" | "paid";
+  priceLabel?: string;
+  priceSuffix?: string;
+  subscriptions?: Subscription[];
 };
 
 type TabKey = "دهم" | "یازدهم" | "دوازدهم";
@@ -59,18 +63,88 @@ const PLANS: Record<TabKey, Plan[]> = {
       ],
       cta: "رایگان ثبت نام کن",
     },
+
     {
       id: "d10-pro",
       title: "مداد رنگی",
-      priceLabel: "2,534,000",
-      priceSuffix: "تومان",
-      badge: "۳۳٪ تخفیف",
-      oldPrice: "3,840,000",
-      period: "اشتراک ۱۲ ماهه",
       description:
         "مداد رنگی کمک می‌کند کاملا بفهمی، دقیق تحلیل شوی و سریع‌تر پیشرفت کنی.",
       image: "/premium.svg",
       variant: "paid",
+
+      subscriptions: [
+        {
+          period: "اشتراک ۱ ماهه",
+          priceLabel: "320,000",
+        },
+        {
+          period: "اشتراک ۲ ماهه",
+          priceLabel: "576,000",
+          oldPrice: "640,000",
+          badge: "۱۰٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۳ ماهه",
+          priceLabel: "816,000",
+          oldPrice: "960,000",
+          badge: "۱۵٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۳ ماهه",
+          priceLabel: "1,050,000",
+          oldPrice: "1,280,00",
+          badge: "۱۸٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۵ ماهه",
+          priceLabel: "1,264,00",
+          oldPrice: "1,600,000",
+          badge: "۲۱٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۶ ماهه",
+          priceLabel: "1,460,000",
+          oldPrice: "1,920,000",
+          badge: "۲۴٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۷ ماهه",
+          priceLabel: "1,657,000",
+          oldPrice: "2,240,000",
+          badge: "۲۶٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۸ ماهه",
+          priceLabel: "1,843,000",
+          oldPrice: "2,560,000",
+          badge: "۲۸٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۹ ماهه",
+          priceLabel: "2,016,000",
+          oldPrice: "2,880,000",
+          badge: "۳۰٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۱۰ ماهه",
+          priceLabel: "2,176,000",
+          oldPrice: "3,200,000",
+          badge: "۳۲٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۱۱ ماهه",
+          priceLabel: "2,358,000",
+          oldPrice: "3,520,000",
+          badge: "۳۳٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۱۲ ماهه",
+          priceLabel: "2,534,000",
+          oldPrice: "3,840,000",
+          badge: "۳۴٪ تخفیف",
+        },
+      ],
+
       features: [
         { label: "دسترسی کامل به محتوای پایه", available: true },
         { label: "دسترسی کامل به محتوای پیشروی", available: true },
@@ -79,6 +153,7 @@ const PLANS: Record<TabKey, Plan[]> = {
         { label: "دسترسی کامل جدول برنامه ریزی", available: true },
         { label: "دسترسی کامل آزمون", available: true },
       ],
+
       cta: "حرفه ای درس بخون",
     },
   ],
@@ -100,18 +175,88 @@ const PLANS: Record<TabKey, Plan[]> = {
       ],
       cta: "رایگان ثبت نام کن",
     },
+
     {
       id: "d11-pro",
       title: "مداد رنگی",
-      priceLabel: "2,788,000",
-      priceSuffix: "تومان",
-      badge: "۳۳٪ تخفیف",
-      oldPrice: "4,224,000",
-      period: "اشتراک ۱۲ ماهه",
       description:
         "مداد رنگی کمک می‌کند کاملا بفهمی، دقیق تحلیل شوی و سریع‌تر پیشرفت کنی.",
       image: "/premium.svg",
       variant: "paid",
+
+      subscriptions: [
+        {
+          period: "اشتراک ۱ ماهه",
+          priceLabel: "352,000",
+        },
+        {
+          period: "اشتراک ۲ ماهه",
+          priceLabel: "634,000",
+          oldPrice: "704,000",
+          badge: "۱۰٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۳ ماهه",
+          priceLabel: "898,000",
+          oldPrice: "1,056,000",
+          badge: "۱۵٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۴ ماهه",
+          priceLabel: "1,408,000",
+          oldPrice: "1,154,000",
+          badge: "۱۸٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۵ ماهه",
+          priceLabel: "1,390,000",
+          oldPrice: "1,760,000",
+          badge: "۲۱٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۶ ماهه",
+          priceLabel: "1,605,000",
+          oldPrice: "2,112,000",
+          badge: "۲۴٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۷ ماهه",
+          priceLabel: "1,823,000",
+          oldPrice: "2,464,000",
+          badge: "۲۶٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۸ ماهه",
+          priceLabel: "2,027,000",
+          oldPrice: "2,816,000",
+          badge: "۲۸٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۹ ماهه",
+          priceLabel: "2,217,000",
+          oldPrice: "3,529,000",
+          badge: "۳۰٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۱۰ ماهه",
+          priceLabel: "2,394,000",
+          oldPrice: "3,520,000",
+          badge: "۳۲٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۱۱ ماهه",
+          priceLabel: "2,594,000",
+          oldPrice: "3,872,000",
+          badge: "۳۳٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۱۲ ماهه",
+          priceLabel: "2,788,000",
+          oldPrice: "4,224,000",
+          badge: "۳۴٪ تخفیف",
+        },
+      ],
+
       features: [
         { label: "دسترسی کامل به محتوای پایه", available: true },
         { label: "دسترسی کامل به محتوای پیشروی", available: true },
@@ -120,6 +265,7 @@ const PLANS: Record<TabKey, Plan[]> = {
         { label: "دسترسی کامل جدول برنامه ریزی", available: true },
         { label: "دسترسی کامل آزمون", available: true },
       ],
+
       cta: "حرفه ای درس بخون",
     },
   ],
@@ -141,18 +287,88 @@ const PLANS: Record<TabKey, Plan[]> = {
       ],
       cta: "رایگان ثبت نام کن",
     },
+
     {
       id: "d12-pro",
       title: "مداد رنگی",
-      priceLabel: "۳,۲۰۸,۰۰۰",
-      priceSuffix: "تومان",
-      badge: "۳۳٪ تخفیف",
-      oldPrice: "4,840,000",
-      period: "اشتراک ۱۲ ماهه",
       description:
         "مداد رنگی کمک می‌کند کاملا بفهمی، دقیق تحلیل شوی و سریع‌تر پیشرفت کنی.",
       image: "/premium.svg",
       variant: "paid",
+
+      subscriptions: [
+        {
+          period: "اشتراک ۱ ماهه",
+          priceLabel: "405,000",
+        },
+        {
+          period: "اشتراک ۲ ماهه",
+          priceLabel: "729,000",
+          oldPrice: "810,000",
+          badge: "۱۰٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۳ ماهه",
+          priceLabel: "1,032,000",
+          oldPrice: "1,215,000",
+          badge: "۱۵٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۴ ماهه",
+          priceLabel: "1,328,000",
+          oldPrice: "1,620,000",
+          badge: "۱۸٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۵ ماهه",
+          priceLabel: "1,599,000",
+          oldPrice: "2,025,000",
+          badge: "۲۱٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۶ ماهه",
+          priceLabel: "1,847,000",
+          oldPrice: "2,430,000",
+          badge: "۲۴٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۷ ماهه",
+          priceLabel: "2,097,000",
+          oldPrice: "2,835,000",
+          badge: "۲۶٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۸ ماهه",
+          priceLabel: "3,240,000",
+          oldPrice: "2,323,000",
+          badge: "۲۸٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۹ ماهه",
+          priceLabel: "2,551,000",
+          oldPrice: "3,645,000",
+          badge: "۳۰٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۱۰ ماهه",
+          priceLabel: "2,754,000",
+          oldPrice: "4,050,000",
+          badge: "۳۲٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۱۱ ماهه",
+          priceLabel: "2,984,000",
+          oldPrice: "4,455,000",
+          badge: "۳۳٪ تخفیف",
+        },
+        {
+          period: "اشتراک ۱۲ ماهه",
+          priceLabel: "3,208,000",
+          oldPrice: "4,840,000",
+          badge: "۳۴٪ تخفیف",
+        },
+      ],
+
       features: [
         { label: "دسترسی کامل به محتوای پایه", available: true },
         { label: "دسترسی کامل به محتوای پیشروی", available: true },
@@ -161,6 +377,7 @@ const PLANS: Record<TabKey, Plan[]> = {
         { label: "دسترسی کامل جدول برنامه ریزی", available: true },
         { label: "دسترسی کامل آزمون", available: true },
       ],
+
       cta: "حرفه ای درس بخون",
     },
   ],
@@ -172,28 +389,24 @@ export function Pricing() {
   const plans = useMemo(() => PLANS[activeTab], [activeTab]);
 
   return (
-    <section
-      id="pricing"
-      dir="rtl"
-      className="relative overflow-hidden py-16"
-    >
+    <section id="pricing" dir="rtl" className="relative overflow-hidden py-16">
       <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-purple-300/30 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-emerald-300/30 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Tabs */}
-        <div className="mb-10 flex justify-center">
-          <div className="flex gap-2 rounded-2xl border border-white/40 bg-white/30 p-1.5 shadow-lg backdrop-blur-xl">
+        <div className="mb-10 flex justify-center ">
+          <div className="flex gap-4 rounded-2xl border border-white/40 bg-[#FAF5FF] p-1.5 shadow-lg backdrop-blur-xl">
             {TABS.map((tab) => {
               const isActive = tab.key === activeTab;
               return (
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
-                  className={`rounded-xl px-5 py-2 text-xs font-bold transition-all ${
+                  className={`rounded-lg px-6 py-2 font-bold transition-all md:text-2xl ${
                     isActive
-                      ? "bg-white text-[var(--brand)] shadow-md"
-                      : "text-gray-600 hover:bg-white/40 hover:text-gray-900"
+                      ? "bg-white text-[#0A0A0A] shadow-md font-bold"
+                      : "text-[#5A5A5A] hover:bg-white/40 hover:text-gray-900 font-light"
                   }`}
                 >
                   {tab.label}
@@ -203,128 +416,94 @@ export function Pricing() {
           </div>
         </div>
 
-    {/* Mobile: Swiper carousel */}
-<div className="block md:hidden">
-  <Swiper
-    key={activeTab}
-    modules={[Navigation, Pagination, A11y, Keyboard]}
-    spaceBetween={16}
-    slidesPerView={1}
-    navigation
-    pagination={{ clickable: true }}
-    keyboard={{ enabled: true }}
-    grabCursor
-    dir="rtl"
-    className="!pb-14 pricing-swiper"
-  >
-    {plans.map((plan) => (
-      <SwiperSlide key={plan.id} className="!h-auto">
-        <PlanCard plan={plan} />
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
+        {/* Mobile: Swiper carousel */}
+        <div className="block md:hidden">
+          {plans.map((plan) => (
+            <PlanCard key={plan.id} plan={plan} />
+          ))}
+        </div>
 
-{/* Desktop: centered grid, no carousel */}
-<div className="hidden md:flex md:justify-center md:items-stretch md:gap-8">
-  {plans.map((plan) => (
-    <div key={plan.id} className="w-full max-w-md">
-      <PlanCard plan={plan} />
-    </div>
-  ))}
-</div>
+        {/* Desktop: centered grid, no carousel */}
+        <div className="hidden md:flex md:justify-center md:items-stretch md:gap-8">
+          {plans.map((plan) => (
+            <div key={plan.id} className="w-full max-w-md">
+              <PlanCard plan={plan} />
+            </div>
+          ))}
+        </div>
       </div>
-
-      <style jsx global>{`
-        .pricing-swiper .swiper-button-next,
-        .pricing-swiper .swiper-button-prev {
-          width: 44px;
-          height: 44px;
-          border-radius: 9999px;
-          background: rgba(255, 255, 255, 0.55);
-          backdrop-filter: blur(12px);
-          border: 1px solid rgba(255, 255, 255, 0.5);
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-          color: #374151;
-        }
-        .pricing-swiper .swiper-button-next::after,
-        .pricing-swiper .swiper-button-prev::after {
-          font-size: 14px;
-          font-weight: 700;
-        }
-        .pricing-swiper .swiper-pagination {
-          bottom: 0 !important;
-        }
-        .pricing-swiper .swiper-pagination-bullet {
-          background: #cbd5e1;
-          opacity: 1;
-          width: 8px;
-          height: 8px;
-          transition: all 0.3s;
-        }
-        .pricing-swiper .swiper-pagination-bullet-active {
-          background: var(--brand);
-          width: 28px;
-          border-radius: 9999px;
-        }
-      `}</style>
     </section>
   );
 }
 
 // ─── Card ─────────────────────────────────────────────────────────────────
+
 function PlanCard({ plan }: { plan: Plan }) {
-  const [open, setOpen] = useState(false);
   const isFree = plan.variant === "free";
 
-  return (
-   <div className="relative mx-auto flex h-full w-full max-w-md flex-col">
-      <div className="relative flex h-full flex-col overflow-hidden rounded-3xl bg-white p-6 shadow-[0_20px_60px_-15px_rgba(124,58,237,0.25)] ring-1 ring-purple-100/60">
-        {/* Decorative corner blob */}
-        <div className="pointer-events-none absolute -left-16 bottom-32 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-200/40 to-pink-200/20 blur-2xl" />
+  const [selectedPeriod, setSelectedPeriod] = useState(
+    plan.subscriptions?.[0]?.period ?? ""
+  );
 
-        {/* ── Header ── */}
+  const selectedSubscription = plan.subscriptions?.find(
+    (subscription) => subscription.period === selectedPeriod
+  );
+
+  // Values shown on the card
+  const priceLabel = isFree
+    ? plan.priceLabel
+    : selectedSubscription?.priceLabel;
+
+  const oldPrice = selectedSubscription?.oldPrice;
+  const badge = selectedSubscription?.badge;
+
+  return (
+    <div className="relative mx-auto flex h-200 w-full max-w-md flex-col ">
+      <div
+        className={`relative p-6 flex h-full flex-col overflow-hidden rounded-3xl ${
+          plan.variant === "free" ? "bg-white" : "bg-custom-gradient"
+        }`}
+      >
+        {/* Header */}
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 text-right">
-            <h3 className="text-2xl font-black text-gray-800">{plan.title}</h3>
+            <h3 className="text-4xl font-black text-[#5A5A5A]">{plan.title}</h3>
 
-            {/* Paid: discount + old price */}
-            {plan.badge || plan.oldPrice ? (
-              <div className="mt-3 flex items-center justify-end gap-2">
-                {plan.badge && (
-                  <span className="text-[11px] font-bold text-red-500">
-                    {plan.badge}
-                  </span>
-                )}
-                {plan.oldPrice && (
-                  <span className="relative text-sm font-bold text-gray-400">
-                    {plan.oldPrice}
+            {/* Discount + old price */}
+            {!isFree && (badge || oldPrice) && (
+              <div className="mt-8 flex items-center justify-start gap-2">
+                {oldPrice && (
+                  <span className="relative text-2xl font-bold text-gray-400">
+                    {oldPrice}
+
                     <span className="absolute left-0 top-1/2 h-[1.5px] w-full -translate-y-1/2 bg-red-500" />
                   </span>
                 )}
+                {badge && (
+                  <span className="text-[11px] font-bold text-red-500">
+                    {badge}
+                  </span>
+                )}
               </div>
-            ) : null}
+            )}
 
-            {/* Price / Free label */}
+            {/* Price */}
             <div
-              className={`mt-2 flex items-baseline justify-end gap-1 ${
+              className={`mt-4 flex items-baseline justify-start gap-1 ${
                 isFree ? "mt-6" : ""
               }`}
             >
               {isFree ? (
                 <span className="text-5xl font-black text-[#1e3a5f]">
-                  {plan.priceLabel}
+                  رایگان
                 </span>
               ) : (
                 <>
-                  <span className="text-3xl font-black tracking-tight text-gray-900">
-                    {plan.priceLabel}
+                  <span className="text-5xl font-black tracking-tight text-gray-900">
+                    {priceLabel}
                   </span>
-                  {plan.priceSuffix && (
-                    <span className="text-xs text-gray-500">
-                      {plan.priceSuffix}
-                    </span>
-                  )}
+
+                  <span className="text-xs text-gray-500">تومان</span>
                 </>
               )}
             </div>
@@ -332,109 +511,91 @@ function PlanCard({ plan }: { plan: Plan }) {
 
           {/* Illustration */}
           <div className="relative h-24 w-24 shrink-0">
-        
-            <Image
-                 src={plan.image}
-                 alt="teaser"
-                 width={100}
-                 height={100}
-               />
-
+            <Image src={plan.image} alt={plan.title} width={100} height={100} />
           </div>
         </div>
 
-        {/* ── Subscription dropdown (paid only) ── */}
-        {plan.period && (
-          <>
-            <button
-              type="button"
-              onClick={() => setOpen((v) => !v)}
-              className="mt-6 flex w-full items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-bold text-gray-700 shadow-sm transition hover:border-purple-300"
+        {/* Period dropdown */}
+        {!isFree && plan.subscriptions && (
+          <div className="mt-6">
+            <select
+              value={selectedPeriod}
+              onChange={(e) => setSelectedPeriod(e.target.value)}
+              className="w-full appearance-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-[16px] font-bold text-gray-700 shadow-sm outline-none transition focus:border-purple-400 focus:ring-2 focus:ring-purple-100"
             >
-              <ChevronDown
-                size={16}
-                className={`text-gray-500 transition-transform ${
-                  open ? "rotate-180" : ""
-                }`}
-              />
-              <span>{plan.period}</span>
-            </button>
-
-            {open && (
-              <ul className="mt-2 space-y-1 rounded-xl border border-gray-100 bg-white p-2 text-xs">
-                <li className="cursor-pointer rounded-lg px-3 py-2 hover:bg-purple-50">
-                  اشتراک ۱ ماهه
-                </li>
-                <li className="cursor-pointer rounded-lg px-3 py-2 hover:bg-purple-50">
-                  اشتراک ۶ ماهه
-                </li>
-                <li className="cursor-pointer rounded-lg bg-purple-50 px-3 py-2 font-bold text-purple-700">
-                  {plan.period}
-                </li>
-              </ul>
-            )}
-          </>
+              {plan.subscriptions.map((subscription) => (
+                <option
+                  key={subscription.priceLabel}
+                  value={subscription.period}
+                >
+                  {subscription.period}
+                </option>
+              ))}
+            </select>
+          </div>
         )}
 
-        {/* ── Description ── */}
-        <p className="mt-5 text-center text-[13px] leading-7 text-gray-700">
+        {/* Description */}
+        <p className="mt-5 text-right text-[13px] leading-7 text-gray-700">
           {plan.description}
         </p>
-
-        {/* ── Divider ── */}
-        <div className="my-5 h-px w-full bg-gradient-to-l from-transparent via-gray-200 to-transparent" />
-
-        {/* ── Features ── */}
-        <ul className="space-y-4 text-[13px] flex h-full flex-col overflow-hidden rounded-3xl bg-white p-6 shadow-[0_20px_60px_-15px_rgba(124,58,237,0.25)] ring-1 ring-purple-100/60">
-          {plan.features.map((feature) => (
-            <li
-              key={feature.label}
-              className="flex items-center justify-start gap-2"
-            >
-       
-              {feature.available ? (
-                <Check
-                  size={15}
-                  className="shrink-0 text-gray-600"
-                  strokeWidth={3}
-                />
-              ) : (
-                <X
-                  size={15}
-                  className="shrink-0 text-red-500"
-                  strokeWidth={3}
-                />
-              )}
-                     <span
-                className={
-                  feature.available
-                    ? "text-gray-800"
-                    : "font-medium text-red-500 line-through decoration-red-400"
-                }
+        <div className="flex justify-between h-full">
+          {/* Features */}
+          <ul className="flex  flex-col space-y-4 overflow-hidden rounded-3xl  p-6 text-[13px] ">
+            {plan.features.map((feature) => (
+              <li
+                key={feature.label}
+                className="flex items-center justify-start gap-2"
               >
-                {feature.label}
-              </span>
-            </li>
-          ))}
-        </ul>
+                {feature.available ? (
+                  <Check
+                    size={15}
+                    className="shrink-0 text-gray-600"
+                    strokeWidth={3}
+                  />
+                ) : (
+                  <X
+                    size={15}
+                    className="shrink-0 text-red-500"
+                    strokeWidth={3}
+                  />
+                )}
 
-        {/* ── CTA ── */}
-        {isFree ? (
-          <button
-            type="button"
-            className="mt-8 w-full rounded-xl border-2 border-gray-800 bg-white py-3.5 text-sm font-black text-gray-900 transition hover:bg-gray-50 active:scale-[0.98]"
-          >
-            {plan.cta}
-          </button>
-        ) : (
-          <button
-            type="button"
-            className="mt-8 w-full rounded-xl bg-gradient-to-l from-purple-700 to-purple-600 py-3.5 text-sm font-black text-white shadow-lg shadow-purple-500/30 transition hover:brightness-110 active:scale-[0.98]"
-          >
-            {plan.cta}
-          </button>
-        )}
+                <span
+                  className={
+                    feature.available
+                      ? "text-gray-800"
+                      : "font-medium text-red-500 line-through decoration-red-400"
+                  }
+                >
+                  {feature.label}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <Image
+            src={
+              plan.variant === "free" ? "/free-stroke.svg" : "/stroke-pro.svg"
+            }
+            className="relative -ml-6"
+            alt="teaser"
+            width={85}
+            height={220}
+          />
+        </div>
+        {/* CTA */}
+        <button
+          type="button"
+          className={`mt-8 w-full rounded-xl py-3.5 text-xl font-bold transition active:scale-[0.98] ${
+            isFree
+              ? "border-2 border-gray-800 bg-white text-gray-900 hover:bg-gray-50"
+              : "bg-gradient-to-l from-purple-700 to-purple-600 text-white shadow-lg shadow-purple-500/30 hover:brightness-110"
+          }`}
+        >
+          {plan.cta}
+        </button>
       </div>
     </div>
   );
 }
+

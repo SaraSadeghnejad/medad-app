@@ -47,12 +47,14 @@
   border-radius: 0.75rem;
   background: var(--brand);
   padding: 0.75rem 1.5rem;
-  font-size: 0.875rem;
   font-weight: 700;
   color: #ffffff;
   transition: background-color 0.15s ease;
 }
-
+.bg-custom-gradient{
+   background:linear-gradient(180deg, #FFF4F5 0%, #FFF4FC 16.82%, #F9F4FF 33.17%, #F4FFFF 46.15%, #F4FFF8 62.98%, #FBFFF4 79.81%, #FEFFF4 100%);
+   box-shadow:0 20px 60px -15px rgba(124,58,237,0.25);
+}
 .btn-primary:hover {
   background: var(--brand-dark);
 }
