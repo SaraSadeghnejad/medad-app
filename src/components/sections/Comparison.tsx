@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export function Comparison() {
   return (
-    <section className="section ">
+    <section className="section hidden sm:block">
       <div className="grid grid-cols-1 gap-0 lg:grid-cols-2">
         {/* Wrong way */}
         <div className="rounded-2xl border border-red-100 border-l-0 rounded-bl-none rounded-tl-none bg-red-50/50 p-6">
