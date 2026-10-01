@@ -335,7 +335,7 @@ function PlanCard({ plan }: { plan: Plan }) {
           <div className="relative h-24 w-24 shrink-0">
         
             <Image
-                 src="/premium.png"
+                 src={plan.image}
                  alt="teaser"
                  width={100}
                  height={100}
