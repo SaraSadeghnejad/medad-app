@@ -12,9 +12,19 @@ export function AppShowcase() {
   return (
     <section className="py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-center gap-4 overflow-x-auto pb-4">
+        <div className="hidden sm:flex items-end justify-center gap-4 overflow-x-auto pb-4">
           <Image
             src="/showcase.png"
+            alt="teaser"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
+        <div className="flex items-end justify-center gap-4 overflow-x-auto pb-4 sm:hidden">
+          <Image
+            src="/mobile-aud.svg"
             alt="teaser"
             width={0}
             height={0}
