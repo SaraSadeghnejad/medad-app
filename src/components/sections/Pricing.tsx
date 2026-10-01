@@ -46,9 +46,8 @@ const PLANS: Record<TabKey, Plan[]> = {
       id: "d10-free",
       title: "مداد سیاه",
       priceLabel: "رایگان",
-      description:
-        "مداد سیاه کمک می‌کند شروع کنی و در مسیر بمانی.",
-      image:'/freemium.svg',
+      description: "مداد سیاه کمک می‌کند شروع کنی و در مسیر بمانی.",
+      image: "/freemium.svg",
       variant: "free",
       features: [
         { label: "دسترسی محدود به محتوای پایه", available: true },
@@ -63,10 +62,10 @@ const PLANS: Record<TabKey, Plan[]> = {
     {
       id: "d10-pro",
       title: "مداد رنگی",
-      priceLabel: "۳,۲۰۸,۰۰۰",
+      priceLabel: "2,534,000",
       priceSuffix: "تومان",
       badge: "۳۳٪ تخفیف",
-      oldPrice: "۱۵,۶۵۰,۰۰۰",
+      oldPrice: "3,840,000",
       period: "اشتراک ۱۲ ماهه",
       description:
         "مداد رنگی کمک می‌کند کاملا بفهمی، دقیق تحلیل شوی و سریع‌تر پیشرفت کنی.",
@@ -89,7 +88,7 @@ const PLANS: Record<TabKey, Plan[]> = {
       title: "مداد سیاه",
       priceLabel: "رایگان",
       description: "مداد سیاه کمک می‌کند شروع کنی و در مسیر بمانی.",
-      image:'/freemium.svg',
+      image: "/freemium.svg",
       variant: "free",
       features: [
         { label: "دسترسی محدود به محتوای پایه", available: true },
@@ -104,14 +103,14 @@ const PLANS: Record<TabKey, Plan[]> = {
     {
       id: "d11-pro",
       title: "مداد رنگی",
-      priceLabel: "۳,۲۰۸,۰۰۰",
+      priceLabel: "2,788,000",
       priceSuffix: "تومان",
       badge: "۳۳٪ تخفیف",
-      oldPrice: "۱۵,۶۵۰,۰۰۰",
+      oldPrice: "4,224,000",
       period: "اشتراک ۱۲ ماهه",
       description:
         "مداد رنگی کمک می‌کند کاملا بفهمی، دقیق تحلیل شوی و سریع‌تر پیشرفت کنی.",
-      image: '/premium.svg',
+      image: "/premium.svg",
       variant: "paid",
       features: [
         { label: "دسترسی کامل به محتوای پایه", available: true },
@@ -130,7 +129,7 @@ const PLANS: Record<TabKey, Plan[]> = {
       title: "مداد سیاه",
       priceLabel: "رایگان",
       description: "مداد سیاه کمک می‌کند شروع کنی و در مسیر بمانی.",
-      image:'/freemium.svg',
+      image: "/freemium.svg",
       variant: "free",
       features: [
         { label: "دسترسی محدود به محتوای پایه", available: true },
@@ -148,7 +147,7 @@ const PLANS: Record<TabKey, Plan[]> = {
       priceLabel: "۳,۲۰۸,۰۰۰",
       priceSuffix: "تومان",
       badge: "۳۳٪ تخفیف",
-      oldPrice: "۱۵,۶۵۰,۰۰۰",
+      oldPrice: "4,840,000",
       period: "اشتراک ۱۲ ماهه",
       description:
         "مداد رنگی کمک می‌کند کاملا بفهمی، دقیق تحلیل شوی و سریع‌تر پیشرفت کنی.",
