@@ -4,14 +4,14 @@ import Image from "next/image";
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="section relative z-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+      <div className="section relative z-10  items-center gap-10 flex   flex-col-reverse sm:flex-row">
         {/* Copy */}
-        <div className="text-center lg:text-right">
-          <p className="text-3xl font-Iransans-bold font-bold leading-20 text-main-text-color sm:text-4xl lg:text-6xl">
+        <div className="text-center md:text-right">
+          <p className="text-3xl font-Iransans-bold font-bold leading-20 text-[var(--main-text-colort)] sm:text-4xl lg:text-6xl">
             یادگیری، فقط ویدیو دیدن نیست!
           </p>
 
-          <p className="mt-4 text-sm leading-7 text-sub-text-color sm:text-base">
+          <p className="mt-4 text-sm leading-7 text-[var(--sub-text-colort)] sm:text-base">
             مسیر سخت یادگیری رو به قدم های خیلی کوچیک تبدیل کن.
           </p>
 
@@ -32,8 +32,8 @@ export function Hero() {
         <div className="flex flex-col justify-center">
           {/* Replace with real illustration */}
           <Image src="/pic1.png" alt="teaser" width={500} height={250} />
-          <div className="mt-10 flex   items-center justify-center gap-6 text-xs text-gray-500 lg:justify-end">
-            <div className=" flex flex-col flex-wrap items-start justify-center gap-4 text-xs text-gray-500 lg:justify-start">
+          <div className="mt-10 flex   items-center justify-center gap-6 text-xs text-[var(--sub-text-colort)] lg:justify-end">
+            <div className=" flex flex-col flex-wrap items-start justify-center gap-4 text-xs text-[var(--sub-text-colort)] lg:justify-start">
               <Image
                 src="/camp2-logo.png"
                 alt="teaser"
@@ -44,7 +44,7 @@ export function Hero() {
                 دارای اعتبارنامه رشد وزارت آموزش و پرورش
               </span>
             </div>
-            <div className=" flex flex-col flex-wrap items-start justify-center gap-6 text-xs text-gray-500 lg:justify-start">
+            <div className=" flex flex-col flex-wrap items-start justify-center gap-6 text-xs text-[var(--sub-text-colort)]lg:justify-start">
               <Image
                 src="/camp-logo.png"
                 alt="teaser"

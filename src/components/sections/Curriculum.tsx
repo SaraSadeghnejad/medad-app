@@ -46,7 +46,7 @@ export function Curriculum() {
         <h2 className="section-title text-center">
           مدادپ فقط محتوا نیست، یک چرخه کامل آموزشی
         </h2>
-        <p className="mt-3 text-center text-sm text-gray-500">
+        <p className="mt-3 text-center text-sm text-[var(--sub-text-colort)]">
           مسیر سخت یادگیری رو به قدم های خیلی کوچیک تبدیل کن.
         </p>
 
@@ -69,10 +69,10 @@ export function Curriculum() {
                         height={22}
                       />
                     </div>
-                    <h3 className="mb-2 text-base font-bold text-gray-900">
+                    <h3 className="mb-2 text-base font-bold text-[var(--main-text-colort)]">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-6 text-[#757575]">
+                    <p className="text-sm leading-6 text-[var(--sub-text-colort)]]">
                       {item.description}
                     </p>
                   </div>

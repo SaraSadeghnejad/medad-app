@@ -39,10 +39,10 @@ export function Audience() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-light)] text-[var(--brand)]">
                   <Icon size={22} />
                 </div>
-                <h3 className="mb-2 text-base font-bold text-gray-900">
+                <h3 className="mb-2 text-base font-bold text-[var(--main-text-colort)]">
                   {item.title}
                 </h3>
-                <p className="text-sm leading-6 text-gray-500">
+                <p className="text-sm leading-6 text-[var(--sub-text-colort)]">
                   {item.description}
                 </p>
               </div>

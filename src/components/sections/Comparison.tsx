@@ -9,9 +9,9 @@ export function Comparison() {
         <div className="rounded-2xl border border-red-100 border-l-0 rounded-bl-none rounded-tl-none bg-red-50/50 p-6">
           <h3 className="mb-6 flex items-center gap-2 text-base font-bold text-red-600">
             <CircleX size={18} />
-           بدون مداداپ  
+            بدون مداداپ
           </h3>
-          <ul className="space-y-8 text-sm text-[#757575]">
+          <ul className="space-y-8 text-sm text-[var(--sub-text-colort)]">
             <li>• منابع زیاد، مسیر نامشخص</li>
             <li>• یادگیری پراکنده و نامنظم</li>
             <li>• فقط دیدن، بدون سنجش کافی</li>
@@ -30,17 +30,17 @@ export function Comparison() {
 
         {/* Right way */}
         <div className="rounded-2xl border border-[#DEE1E6] border-r-0 rounded-br-none rounded-tr-none  p-6">
-          <h3 className="mb-6 flex items-center gap-2 text-base font-bold text-[#172B3D]">
+          <h3 className="mb-6 flex items-center gap-2 text-base font-bold text-[var(--main-text-colort)]">
             <CircleCheckBig size={18} className="text-[#27C840]" />
-         همراه با مداداپ  
+            همراه با مداداپ
           </h3>
-          <ul className="space-y-8 text-sm text-[#757575]">
+          <ul className="space-y-8 text-sm text-[var(--sub-text-colort)]">
             <li>• یک مسیر روشن برای یادگیری</li>
             <li>• آموزش، تمرین و آزمون در کنار هم</li>
             <li>• بازخورد و پیگیری پیشرفت</li>
             <li>• حرکت مرحله‌به‌مرحله و هدفمند</li>
           </ul>
-           <Image
+          <Image
             src="/sec5.svg"
             alt="teaser"
             width={0}

@@ -49,12 +49,12 @@ export function FAQ() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-right"
                 >
-                  <span className="text-sm font-bold text-gray-900">
+                  <span className="text-sm font-bold text-[var(--main-text-colort)]">
                     {faq.q}
                   </span>
                   <ChevronDown
                     size={18}
-                    className={`shrink-0 text-gray-400 transition-transform ${
+                    className={`shrink-0 text-[var(--sub-text-colort)] transition-transform ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -62,7 +62,9 @@ export function FAQ() {
 
                 {isOpen && (
                   <div className="border-t border-gray-100 px-5 py-4">
-                    <p className="text-sm leading-7 text-gray-600">{faq.a}</p>
+                    <p className="text-sm leading-7 text-[var(--sub-text-colort)]">
+                      {faq.a}
+                    </p>
                   </div>
                 )}
               </div>
@@ -70,7 +72,7 @@ export function FAQ() {
           })}
         </div>
 
-        <p className="mt-8 text-center text-xs text-gray-500">
+        <p className="mt-8 text-center text-xs text-[var(--sub-text-colort)]">
           سایر سوالات پرتکرار ...
         </p>
       </section>
