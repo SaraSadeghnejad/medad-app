@@ -139,9 +139,9 @@ function QuoteCardView({ card }: { card: QuoteCard }) {
   return (
     <div className=" flex h-full flex-col shadow-[0px_4px_10px_0px_#00000040] border border-[#DEE1E6] rounded-4xl p-3">
       {/* Inner top line */}
-      <div className="rounded-[20px] relative border-3 border-purple-500 z-0 p-2">
+      <div className="rounded-[20px] relative border-3 border-purple-500 z-0 p-4">
         {/* Top opening quotes */}
-        <div className="flex justify-center items-center absolute -top-6 z-50 -left-4 bg-white w-16 h-16 ">
+        <div className="flex justify-center items-center absolute -top-3 z-50 -left-2 rounded-full bg-white w-16 h-12 ">
           <Image src={"/img3.svg"} alt={"quote"} width={50} height={50} />
         </div>
         {/* Header: name + subtitle + avatar */}
@@ -170,7 +170,7 @@ function QuoteCardView({ card }: { card: QuoteCard }) {
         <p className="mt-6 mb-4 flex-1 text-center text-sm leading-6 text-gray-700">
           {card.quote}
         </p>
-        <div className="flex justify-center items-center absolute z-50 -right-4 -bottom-6 bg-white w-16 h-16 p-2">
+        <div className="flex justify-center items-center absolute z-50 -right-3 -bottom-2 bg-white w-16 rounded-full h-10 ">
           <Image src={"/img2.svg"} alt={"quote"} width={50} height={50} />
         </div>
         {/* Bottom closing quotes */}
