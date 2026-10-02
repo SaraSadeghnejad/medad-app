@@ -43,7 +43,7 @@ export function Curriculum() {
   return (
     <div className="bg-[var(--bg-soft)]">
       <section id="curriculum" className="section  ">
-        <h2 className="font-semibold text-4xl text-center">
+        <h2 className="font-semibold text-4xl text-center leading-18">
           مدادپ فقط محتوا نیست، یک چرخه کامل آموزشی
         </h2>
         <p className="mt-6 text-center text-xl text-[#757575]">
