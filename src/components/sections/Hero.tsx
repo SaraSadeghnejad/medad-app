@@ -4,18 +4,19 @@ import Image from "next/image";
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="section relative z-10  items-center gap-10 flex   flex-col-reverse sm:flex-row">
+      <div className="section relative z-10  items-center gap-10 flex   flex-col-reverse md:flex-row">
         {/* Copy */}
         <div className="text-center md:text-right">
-          <p className="text-3xl font-Iransans-bold font-bold leading-20 text-[#172B3D] sm:text-4xl lg:text-6xl">
-            یادگیری، فقط ویدیو دیدن نیست!
+          <p className=" relative z-50 md:-left-8 mb-6 text-3xl font-Iransans-bold font-semibold leading-24 text-[#172B3D] sm:text-4xl lg:text-[64px]">
+            <span className="lg:text-nowrap ">یادگیری، فقط ویدیو دیدن </span> <br />
+            نیست!
           </p>
 
-          <p className="mt-4 text-xl leading-7 text-[#757575] sm:text-base">
+          <p className="mt-4 text-xl leading-7 text-[#757575] md:mr-8">
             مسیر سخت یادگیری رو به قدم های خیلی کوچیک تبدیل کن.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-cente space-x-10 justify-center gap-3 lg:justify-start">
+          <div className="mt-8 flex flex-wrap items-cente space-x-10 justify-center gap-3 lg:justify-start md:mr-8">
             <a href="#pricing" className="btn-primary text-xl">
               شروع رایگان
             </a>
@@ -31,7 +32,7 @@ export function Hero() {
         {/* Illustration */}
         <div className="flex flex-col justify-center">
           {/* Replace with real illustration */}
-          <Image src="/pic1.png" alt="teaser" width={500} height={250} />
+          <Image src="/pic1.png" alt="teaser" width={500} height={280} className="relative z-0" />
           <div className="mt-10 flex   items-center justify-center gap-6 text-xs text-[var(--sub-text-colort)] lg:justify-end">
             <div className=" flex flex-col flex-wrap items-start justify-center gap-4 text-xs text-[var(--sub-text-colort)] lg:justify-start">
               <Image

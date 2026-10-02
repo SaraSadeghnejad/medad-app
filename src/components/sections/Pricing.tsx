@@ -458,7 +458,7 @@ function PlanCard({ plan }: { plan: Plan }) {
   const badge = selectedSubscription?.badge;
 
   return (
-    <div className="relative mx-auto flex h-200 w-full max-w-md flex-col ">
+    <div className="relative mx-auto flex h-200 w-full max-w-lg flex-col ">
       <div
         className={`relative p-6 flex h-full flex-col overflow-hidden rounded-3xl ${
           plan.variant === "free" ? "bg-white" : "bg-custom-gradient"
@@ -473,14 +473,14 @@ function PlanCard({ plan }: { plan: Plan }) {
             {!isFree && (badge || oldPrice) && (
               <div className="mt-8 flex items-center justify-start gap-2">
                 {oldPrice && (
-                  <span className="relative text-2xl font-bold text-gray-400">
+                  <span className="relative text-2xl font-bold text-[#757575]">
                     {oldPrice}
 
-                    <span className="absolute left-0 top-1/2 h-[1.5px] w-full -translate-y-1/2 bg-red-500" />
+                    <span className="absolute left-0 top-1/2 h-[1.5px] w-full -translate-y-1/2 bg-[#EC221F]" />
                   </span>
                 )}
                 {badge && (
-                  <span className="text-[11px] font-bold text-red-500">
+                  <span className="text-[11px] font-bold text-[#EC221F]">
                     {badge}
                   </span>
                 )}
@@ -510,8 +510,13 @@ function PlanCard({ plan }: { plan: Plan }) {
           </div>
 
           {/* Illustration */}
-          <div className="relative h-24 w-24 shrink-0">
-            <Image src={plan.image} alt={plan.title} width={100} height={100} />
+          <div className="relative  shrink-0">
+            <Image
+              src={plan.image}
+              alt={plan.title}
+              width={plan.variant === "free" ? 175 : 225}
+              height={plan.variant === "free" ? 146 : 158}
+            />
           </div>
         </div>
 
@@ -536,7 +541,7 @@ function PlanCard({ plan }: { plan: Plan }) {
         )}
 
         {/* Description */}
-        <p className="mt-5 text-right text-[13px] leading-7 text-gray-700">
+        <p className="mt-5 text-right text-[16px] leading-7 text-gray-700">
           {plan.description}
         </p>
         <div className="flex justify-between h-full">
@@ -550,22 +555,22 @@ function PlanCard({ plan }: { plan: Plan }) {
                 {feature.available ? (
                   <Check
                     size={15}
-                    className="shrink-0 text-gray-600"
-                    strokeWidth={3}
+                    className="shrink-0 text-[#757575]"
+                    strokeWidth={1}
                   />
                 ) : (
                   <X
                     size={15}
-                    className="shrink-0 text-red-500"
-                    strokeWidth={3}
+                    className="shrink-0 text-[#900B09]"
+                    strokeWidth={1}
                   />
                 )}
 
                 <span
                   className={
                     feature.available
-                      ? "text-gray-800"
-                      : "font-medium text-red-500 line-through decoration-red-400"
+                      ? "text-[#757575] text-[16px] "
+                      : "text-[16px] text-[#900B09]  "
                   }
                 >
                   {feature.label}

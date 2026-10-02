@@ -102,10 +102,10 @@ export function Testimonials() {
 // ─── Stat card ────────────────────────────────────────────────────────────
 function StatCardView({ card }: { card: StatCard }) {
   return (
-    <div className="relative  flex h-full  flex-col shadow-[0px_4px_10px_0px_#00000040] border border-[#DEE1E6] justify-center rounded-3xl  bg-white p-6 ">
-      <div className="border-[3px] border-[#B2B2B2] m-2 p-6 rounded-3xl">
+    <div className=" flex h-full flex-col shadow-[0px_4px_10px_0px_#00000040] border border-[#DEE1E6] rounded-4xl p-3 ">
+      <div className="border-[3px] border-[#B2B2B2] p-6 rounded-[20px] h-full flex justify-center flex-col items-start ">
         {/* Top row: stars + percent + title */}
-        <div className="mb-4 flex items-center flex-row-reverse justify-between gap-4 ">
+        <div className="mb-4 flex items-center flex-row-reverse justify-between gap-4 w-full">
           {/* Stars (left) */}
           <div className="flex shrink-0 gap-0.5">
             {[...Array(5)].map((_, i) => (
@@ -119,14 +119,14 @@ function StatCardView({ card }: { card: StatCard }) {
 
           {/* Percent + title (right) */}
           <div className="text-right">
-            <div className="text-lg font-black text-gray-900">
+            <div className="text-[16px] font-black text-gray-900">
               {card.percent} {card.title}
             </div>
           </div>
         </div>
 
         {/* Subtitle */}
-        <p className="text-right text-xs leading-6 text-gray-500">
+        <p className="text-right text-sm leading-6 text-gray-500">
           {card.subtitle}
         </p>
       </div>
@@ -137,9 +137,9 @@ function StatCardView({ card }: { card: StatCard }) {
 // ─── Quote card ───────────────────────────────────────────────────────────
 function QuoteCardView({ card }: { card: QuoteCard }) {
   return (
-    <div className=" flex h-full flex-col shadow-[0px_4px_10px_0px_#00000040] border border-[#DEE1E6] rounded-xl p-3">
+    <div className=" flex h-full flex-col shadow-[0px_4px_10px_0px_#00000040] border border-[#DEE1E6] rounded-4xl p-3">
       {/* Inner top line */}
-      <div className="rounded-xl relative border-3 border-purple-500 z-0 p-2">
+      <div className="rounded-[20px] relative border-3 border-purple-500 z-0 p-2">
         {/* Top opening quotes */}
         <div className="flex justify-center items-center absolute -top-6 z-50 -left-4 bg-white w-16 h-16 ">
           <Image src={"/img3.svg"} alt={"quote"} width={50} height={50} />
@@ -148,7 +148,7 @@ function QuoteCardView({ card }: { card: QuoteCard }) {
         <div className=" flex flex-row-reverse items-start justify-between gap-3 pt-6 pl-6">
           <div className="flex-1" />
           <div className="text-right">
-            <h3 className="text-sm font-extrabold text-gray-900">
+            <h3 className="text-[16px] font-extrabold text-gray-900">
               {card.name}
             </h3>
             <p className="mt-0.5 text-[10px] font-medium text-gray-400">
@@ -167,7 +167,7 @@ function QuoteCardView({ card }: { card: QuoteCard }) {
         </div>
 
         {/* Quote text */}
-        <p className="mt-6 mb-4 flex-1 text-center text-xs leading-6 text-gray-700">
+        <p className="mt-6 mb-4 flex-1 text-center text-sm leading-6 text-gray-700">
           {card.quote}
         </p>
         <div className="flex justify-center items-center absolute z-50 -right-4 -bottom-6 bg-white w-16 h-16 p-2">

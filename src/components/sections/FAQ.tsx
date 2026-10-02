@@ -32,8 +32,10 @@ export function FAQ() {
   return (
     <div className="bg-[var(--bg-soft)]">
       <section className="section  ">
-        <h2 className="section-title text-center">سوالات پرتکرار</h2>
-        <p className="mt-3 text-center text-sm text-[var(--sub-text-color)]">
+        <h2 className="font-bold text-4xl text-center text-[#172B3D]">
+          سوالات پرتکرار
+        </h2>
+        <p className="mt-3 text-center text-xl text-[#757575]">
           هرچیزی که برای شروع لازم داری بدونی اینجاست.
         </p>
 
@@ -49,12 +51,12 @@ export function FAQ() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-right"
                 >
-                  <span className="text-sm font-bold text-[var(--main-text-colort)]">
+                  <span className="text-[16px] font-bold text-[#1E1E1E]">
                     {faq.q}
                   </span>
                   <ChevronDown
                     size={18}
-                    className={`shrink-0 text-[var(--sub-text-colort)] transition-transform ${
+                    className={`shrink-0 text-[#5A5A5A] transition-transform ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -62,9 +64,7 @@ export function FAQ() {
 
                 {isOpen && (
                   <div className="border-t border-gray-100 px-5 py-4">
-                    <p className="text-sm leading-7 text-[var(--sub-text-colort)]">
-                      {faq.a}
-                    </p>
+                    <p className="text-[16px] leading-7 text-[#5A5A5A]">{faq.a}</p>
                   </div>
                 )}
               </div>
@@ -72,9 +72,7 @@ export function FAQ() {
           })}
         </div>
 
-        <p className="mt-8 text-center text-xs text-[var(--sub-text-colort)]">
-          سایر سوالات پرتکرار ...
-        </p>
+       
       </section>
     </div>
   );

@@ -3,35 +3,35 @@ import Image from "next/image";
 
 const FEATURES = [
   {
-    icon: '/ico1.png',
+    icon: '/ico1.svg',
     title: "کلاس",
     description: "آموزش، جزوه، تمرین و خودآزمایی در کنار هم تا هر مبحث را بهتر و کامل‌تر یاد بگیری.",
     span: "lg:col-span-5",
     image: "/sec1.svg",
   },
   {
-    icon:  '/ico2.png',
+    icon:  '/ico5.svg',
     title: "آزمون",
     description: "با آزمون‌های منظم، فقط درس نمی‌خوانی؛می‌فهمی چقدر یاد گرفته‌ای، کجا ضعف داری و باید روی چه چیزی بیشتر کار کنی.",
     span: "lg:col-span-7",
     image: "/sec2.svg",
   },
   {
-    icon:  '/ico3.png',
+    icon:  '/ico2.svg',
     title: "برنامه‌ریزی",
     description: "داشتن برنامه، شروعِ پیشرفته؛با یک مسیر روشن و برنامه مشخص، قدم‌به‌قدم جلو برو.",
     span: "lg:col-span-7",
     image: "/sec6.svg",
   },
   {
-    icon:  '/ico4.png',
+    icon:  '/ico3.svg',
      title: "مشاوره",
     description: "اینجا تو مسیر تنها نیستی؛با مشاوره باانگیزه‌تر می‌مونی و هدفمندتر جلو می‌ری.",
     span: "lg:col-span-5",
     image: "/sec7.svg",
   },
   {
-    icon:  '/ico5.png',
+    icon:  '/ico4.svg',
     title: "ویچارو",
     description: "دیگه برای رفع اشکال منتظر کلاس بعدی نمون... سؤال‌هات رو بپرس، مفاهیم رو بهتر یاد بگیر و اشکالاتت رو در کمترین زمان برطرف کن. دستیار هوشمند مداداپ همیشه آماده راهنمایی توئه؛ چه تو درس، چه تو مشاوره.",
     span: "lg:col-span-12",
@@ -43,10 +43,10 @@ export function Curriculum() {
   return (
     <div className="bg-[var(--bg-soft)]">
       <section id="curriculum" className="section  ">
-        <h2 className="section-title text-center">
+        <h2 className="font-semibold text-4xl text-center">
           مدادپ فقط محتوا نیست، یک چرخه کامل آموزشی
         </h2>
-        <p className="mt-3 text-center text-sm text-[var(--sub-text-colort)]">
+        <p className="mt-6 text-center text-xl text-[#757575]">
           مسیر سخت یادگیری رو به قدم های خیلی کوچیک تبدیل کن.
         </p>
 
@@ -72,7 +72,7 @@ export function Curriculum() {
                     <h3 className="mb-2 text-xl font-bold text-[#172B3D]">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-6 text-[#757575]">
+                    <p className="text-sm leading-10 text-[#757575]">
                       {item.description}
                     </p>
                   </div>
